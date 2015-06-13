@@ -59,6 +59,18 @@ class Admin extends CI_Controller
 		$this->session->unset_userdata('last_login');
 		redirect('/admin/','refresh');
 	}
+        
+        public function demo()
+	{
+		// destroying all the sessions here
+		
+		$this->session->unset_userdata('user_id');
+		$this->session->unset_userdata('username');
+		$this->session->unset_userdata('ip_id');
+		$this->session->unset_userdata('role_id');
+		$this->session->unset_userdata('last_login');
+		redirect('/admin/','refresh');
+	}
 	
 	public function chk_login()
 	{						
